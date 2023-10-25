@@ -1,3 +1,0 @@
----
-nmap_install_path: /opt/nmap
-nmap_version: "7.70" # This must correspond to a valid version in https://nmap.org/dist/
