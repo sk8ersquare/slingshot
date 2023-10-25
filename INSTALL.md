@@ -12,6 +12,10 @@ This is an overview of the steps to get up and running, with details below:
 8. Install Git-LFS
 9. Check out code
 
+## Decide if you're going to use VMWare Fusion Pro or Parallels Desktop for Mac Pro/Business Edition
+
+- It's already set up for Parallels - otherwise simply rename the `VagrantfileVMWare` to `Vagrantfile`  
+
 ## VMWare Workstation / Fusion Pro
 
 You must purchase and install VMWare Workstation (<https://www.vmware.com/products/workstation-pro.html>) or VMWare Fusion Pro (<https://www.vmware.com/products/fusion.html>).
