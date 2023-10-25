@@ -15,30 +15,11 @@ Vagrant.configure("2") do |config|
         machine.vm.box = "bento/ubuntu-22.04-arm64"
         machine.vm.hostname = "slingshot"
 
-        machine.vm.provider "parallels" do |v|
-            v.gui = true
-
-            v.vmx['displayname'] = "slingshot"
-            v.vmx["memsize"] = "2048"
-            v.vmx["numvcpus"] = "2"
-
-            v.vmx["sound.present"] = "TRUE"
-            v.vmx["sound.autoDetect"] = "TRUE"
-            v.vmx["sound.startConnected"] = "TRUE"
-            v.vmx["sound.fileName"] = "-1"
-
-            v.vmx["ehci.present"] = "TRUE"
-            v.vmx["ehci.pcislotnumber"] = "37"
-            v.vmx["usb.present"] = "TRUE"
-            v.vmx["usb:0.present"] = "TRUE"
-            v.vmx["usb:0.deviceType"] = "hid"
-            v.vmx["usb:0.port"] = "0"
-            v.vmx["usb:0.parent"] = "-1"
-            v.vmx["usb:1.present"] = "TRUE"
-            v.vmx["usb:1.deviceType"] = "hub"
-            v.vmx["usb:1.port"] = "1"
-            v.vmx["usb:1.parent"] = "-1"
-            v.vmx["usb:1.speed"] = "2"
+        config.vm.provider "parallels" do |prl|
+            prl.update_guest_tools = true
+	    prl.name = "slingshot"
+	    prl.memory = 2048
+            prl.cpus = 2
         end
 
         machine.vm.provision "shell",
