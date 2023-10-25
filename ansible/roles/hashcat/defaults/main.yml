@@ -1,3 +1,0 @@
----
-hashcat_install_path: /opt/hashcat
-hashcat_version: "5.1.0" # This must correspond to a valid version in https://github.com/hashcat/hashcat/releases
