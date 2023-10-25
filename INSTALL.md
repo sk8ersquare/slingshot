@@ -16,6 +16,20 @@ You must purchase and install VMWare Workstation (<https://www.vmware.com/produc
 
 **THIS WILL NOT WORK WITH THE NON-PRO VERSION OF VMWARE FUSION!**
 
+## PARALLELS 
+
+Starting with Parallels Desktop 18.3.0, you can create a macOS virtual machine box with Vagrant and Parallels Desktop. Full instructions are available here: KB 129720.
+
+First, make sure that you have Parallels Desktop for Mac Pro or Business Edition and Vagrant properly installed.
+
+https://kb.parallels.com/en/122843
+
+`vagrant plugin install vagrant-parallels`
+
+If you've already got it installed - update
+
+`vagrant plugin update vagrant-parallels`
+
 ## Vagrant
 
 You must install Vagrant. The quickest way is through a package manager:
@@ -68,7 +82,7 @@ git lfs install
 ### Check out the latest code
 
 ```bash
-git clone https://github.com/sansinstitute/slingshot.git
+git clone https://github.com/sk8ersquare/slingshot.git
 ```
 
 ### Create Slingshot machine
