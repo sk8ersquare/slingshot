@@ -16,7 +16,8 @@ Vagrant.configure("2") do |config|
         machine.vm.hostname = "slingshot"
 
         config.vm.provider "parallels" do |prl|
-            prl.check_guest_tools = false
+        #    prl.check_guest_tools = false
+	    prl.update_guest_tools = true
 	    prl.name = "slingshot"
 	    prl.memory = 2048
             prl.cpus = 2
