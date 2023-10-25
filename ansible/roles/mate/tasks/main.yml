@@ -5,9 +5,9 @@
 - import_tasks: "tasks/check_installed.yml"
 
 - block:
-  - name: Add apt repository for Magnus magnifier
-    apt_repository:
-      repo: ppa:flexiondotorg/magnus
+ # - name: Add apt repository for Magnus magnifier
+ #   apt_repository:
+  #    repo: ppa:flexiondotorg/magnus
       
   - name: Install MATE desktop
     apt:
@@ -18,7 +18,7 @@
       - ubuntu-artwork
       - lightdm
       - lightdm-gtk-greeter
-      - magnus
+  #    - magnus
       - onboard
       - open-vm-tools-desktop
       - orca
