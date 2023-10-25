@@ -28,9 +28,9 @@ First, make sure that you have Parallels Desktop for Mac Pro or Business Edition
 
 You must install Vagrant. The quickest way is through a package manager:
 
-* MacOS: `brew cask install vagrant`
-* Linux: `apt-get install vagrant`
-* Windows: `choco install vagrant`
+* MacOS: ```brew cask install vagrant```
+* Linux: ```apt-get install vagrant```
+* Windows: ```choco install vagrant```
 
 For manual installation, see: <https://www.vagrantup.com/downloads.html>
 
@@ -52,31 +52,31 @@ First, make sure that you have Parallels Desktop for Mac Pro or Business Edition
 
 https://kb.parallels.com/en/122843
 
-`vagrant plugin install vagrant-parallels`
+```vagrant plugin install vagrant-parallels```
 
 If you've already got it installed - update
 
-`vagrant plugin update vagrant-parallels`
+```vagrant plugin update vagrant-parallels```
 
 ## Vagrant-reload install
 
 You'll need this globally installed - otherwise it'll prompt for a local install.
 
-`vagrant plugin install vagrant-reload`
+```vagrant plugin install vagrant-reload```
 
 ## Ansible
 
 You must install Ansible. The quickest way is through a package manager:
 
-* MacOS: `brew install ansible`
+* MacOS: ```brew install ansible```
 
 ## Git
 
 You must install Git. The quickest way is through a package manager:
 
-* MacOS: `brew install git`
-* Linux: `apt-get install git`
-* Windows: `choco install git`
+* MacOS: ```brew install git```
+* Linux: ```apt-get install git```
+* Windows: ```choco install git```
 
 For manual installation, see: <https://git-scm.com/downloads>
 
@@ -84,9 +84,9 @@ For manual installation, see: <https://git-scm.com/downloads>
 
 You must install Git LFS. The quickest way is through a package manager:
 
-* MacOS: `brew install git-lfs`
-* Linux: `apt-get install git-lfs`
-* Windows: `choco install git-lfs`
+* MacOS: ```brew install git-lfs```
+* Linux: ```apt-get install git-lfs```
+* Windows: ```choco install git-lfs```
 
 For manual installation, see: <https://help.github.com/en/articles/installing-git-large-file-storage>
 
