@@ -2,13 +2,9 @@
 - name: Install docker
   shell: "curl -sSL https://get.docker.com/ | sh"
   ignore_errors: yes
-  args:
-    warn: false
 
 - name: Install docker-compose
   shell: "sudo mkdir -p ~/.docker/cli-plugins/; curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-aarch64 -o ~/.docker/cli-plugins/docker-compose"
-  args:
-    warn: false
 
 - name: Mark docker-compose executable
   file:
