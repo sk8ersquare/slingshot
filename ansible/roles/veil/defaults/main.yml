@@ -1,3 +1,0 @@
----
-veil_install_path: /opt/veil
-veil_version: master # This must correspond to a valid tag in https://github.com/Veil-Framework/Veil
