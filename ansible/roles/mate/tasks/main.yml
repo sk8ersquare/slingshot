@@ -27,6 +27,7 @@
       - eom
       - language-selector-gnome
       - synapse
+      - acl
       
   - name: Create Orca application menu entry
     copy:
@@ -136,6 +137,7 @@
     copy:
       src: user
       dest: ~/.config/dconf/
+      become: true
       
   - name: Create ~/.config/synapse directory
     file:
