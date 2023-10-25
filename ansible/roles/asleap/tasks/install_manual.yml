@@ -13,8 +13,6 @@
 
 - name: Move asleap files into target install path
   shell: "rm -rf {{ asleap_install_path }}; mv /tmp/asleap-2.2/ {{ asleap_install_path }}/"
-  args:
-    warn: no
 
 - name: Build asleap
   make:
