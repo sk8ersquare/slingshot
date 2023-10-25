@@ -11,8 +11,6 @@
 
 - name: Move hashcat files into target install path
   shell: "rm -rf {{ hashcat_install_path }}/; mv /tmp/hashcat-{{ hashcat_version }}/ {{ hashcat_install_path }}/"
-  args:
-    warn: no
     
 - name: Create hashcat group
   group:
