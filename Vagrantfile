@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
         machine.vm.provision :file, source: "slingshot.tar.gz", destination: "/tmp/labs.tar.gz"
 
         machine.vm.provision "setup", type: "ansible" do |ansible|
-            ansible.compatibility_mode = "2.15"
+            ansible.compatibility_mode = "2.0"
 	    ansible.playbook = "ansible/slingshot.yml"
         end
 
