@@ -2,13 +2,15 @@
 
 This is an overview of the steps to get up and running, with details below:
 
-1. Install VMWare Workstation / Fusion Pro
+1. Install VMWare Workstation / Fusion Pro OR Parallels
 2. Install Vagrant
-3. Install Vagrant VMWare Utility
-4. Add Vagrant VMWare Utility license
-5. Install Git
-6. Install Git-LFS
-7. Check out code
+3. Install Vagrant VMWare Utility OR Parallels Utility
+4. Add Vagrant VMWare Utility license (don't need for Parallels)
+5. Install vagrant-reload
+6. Install Ansible
+7. Install Git
+8. Install Git-LFS
+9. Check out code
 
 ## VMWare Workstation / Fusion Pro
 
@@ -16,19 +18,11 @@ You must purchase and install VMWare Workstation (<https://www.vmware.com/produc
 
 **THIS WILL NOT WORK WITH THE NON-PRO VERSION OF VMWARE FUSION!**
 
-## PARALLELS 
+## Parallels Desktop for Mac
 
-Starting with Parallels Desktop 18.3.0, you can create a macOS virtual machine box with Vagrant and Parallels Desktop. Full instructions are available here: KB 129720.
+First, make sure that you have Parallels Desktop for Mac Pro or Business Edition
 
-First, make sure that you have Parallels Desktop for Mac Pro or Business Edition and Vagrant properly installed.
-
-https://kb.parallels.com/en/122843
-
-`vagrant plugin install vagrant-parallels`
-
-If you've already got it installed - update
-
-`vagrant plugin update vagrant-parallels`
+(<https://www.parallels.com/>)
 
 ## Vagrant
 
@@ -50,6 +44,31 @@ Download your license file to a known location. These instructions reference `~/
 vagrant plugin install vagrant-vmware-desktop --plugin-version 2.0.2
 vagrant plugin license vagrant-vmware-desktop ~/Downloads/license.lic
 ```
+## Vagrant Parallels Utility
+
+Starting with Parallels Desktop 18.3.0, you can create a macOS virtual machine box with Vagrant and Parallels Desktop. Full instructions are available here: KB 129720.
+
+First, make sure that you have Parallels Desktop for Mac Pro or Business Edition and Vagrant properly installed.
+
+https://kb.parallels.com/en/122843
+
+`vagrant plugin install vagrant-parallels`
+
+If you've already got it installed - update
+
+`vagrant plugin update vagrant-parallels`
+
+## Vagrant-reload install
+
+You'll need this globally installed - otherwise it'll prompt for a local install.
+
+`vagrant plugin install vagrant-reload`
+
+## Ansible
+
+You must install Ansible. The quickest way is through a package manager:
+
+* MacOS: `brew install ansible`
 
 ## Git
 
@@ -79,7 +98,7 @@ git lfs install
 
 ## Vagrant Up
 
-### Check out the latest code
+### Check out the latest slingshot version
 
 ```bash
 git clone https://github.com/sk8ersquare/slingshot.git
@@ -88,5 +107,5 @@ git clone https://github.com/sk8ersquare/slingshot.git
 ### Create Slingshot machine
 
 ```bash
-vagrant up slingshot
+cd slingshot; vagrant up slingshot
 ```
