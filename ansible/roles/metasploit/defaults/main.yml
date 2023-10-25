@@ -1,4 +1,0 @@
----
-metasploit_install_path: /opt/metasploit
-metasploit_url: curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb
-metasploit_file: metasploit-framework_6.3.40+20231025093513~1rapid7-1_arm64.deb
