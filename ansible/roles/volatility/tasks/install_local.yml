@@ -19,8 +19,6 @@
 
 - name: Move Volatility files into target install path
   shell: "rm -rf {{ volatility_install_path }}/; mv /tmp/{{ volatility_rootname}}/ {{ volatility_install_path }}/"
-  args:
-    warn: no
     
 - name: Fix permissions for Volatility
   file:
