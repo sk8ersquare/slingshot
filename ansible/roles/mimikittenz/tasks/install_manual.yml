@@ -1,9 +1,0 @@
----
-- name: Download mimikittenz via Git
-  include_role:
-    name: git_cached
-  vars:
-    repo: https://github.com/jamesshew/mimikittenz.git
-    dest: "{{ mimikittenz_install_path }}"
-
-- import_tasks: "tasks/mark_installed.yml"
