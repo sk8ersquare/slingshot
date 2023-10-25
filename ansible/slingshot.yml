@@ -37,10 +37,10 @@
           docker_users:
           - "{{ user_name }}"
 
-      - include_role:
-          name: "{{ item }}"
-        loop:
-        - john
+#      - include_role:
+#          name: "{{ item }}"
+#        loop:
+#        - john
 
       - include_role:
           name: wordlists
