@@ -6,8 +6,7 @@
     warn: false
 
 - name: Install docker-compose
-  shell: "mkdir -p ~/.docker/cli-plugins/"
-  shell: "curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-aarch64 -o ~/.docker/cli-plugins/docker-compose"
+  shell: "sudo mkdir -p ~/.docker/cli-plugins/; curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-aarch64 -o ~/.docker/cli-plugins/docker-compose"
   args:
     warn: false
 
