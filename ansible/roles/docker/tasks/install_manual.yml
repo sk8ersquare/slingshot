@@ -6,13 +6,14 @@
     warn: false
 
 - name: Install docker-compose
-  shell: "curl -L https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose"
+  shell: "mkdir -p ~/.docker/cli-plugins/"
+  shell: "curl -SL https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-linux-aarch64 -o ~/.docker/cli-plugins/docker-compose"
   args:
     warn: false
 
 - name: Mark docker-compose executable
   file:
-    path: /usr/local/bin/docker-compose
+    path: ~/.docker/cli-plugins/docker-compose
     mode: a+x
 
 - import_tasks: "tasks/mark_installed.yml"
