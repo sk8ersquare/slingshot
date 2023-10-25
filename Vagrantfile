@@ -12,10 +12,10 @@ Vagrant.configure("2") do |config|
         commit = `git log --format="%H" -n 1`
         version = "#{time.year}.#{time.month}.#{commit[0..6]}"
 
-        machine.vm.box = "generic/ubuntu1804"
+        machine.vm.box = "bento/ubuntu-22.04-arm64"
         machine.vm.hostname = "slingshot"
 
-        machine.vm.provider "vmware_fusion" do |v|
+        machine.vm.provider "parallels" do |v|
             v.gui = true
 
             v.vmx['displayname'] = "slingshot"
