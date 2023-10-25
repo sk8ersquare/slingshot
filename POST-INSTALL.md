@@ -1,18 +1,17 @@
 # Post-Install
 
 ## Prep VM
-
-1. Remove `sudo rm /etc/netplan/50-vagrant.yaml`
-1. Shut down the machine - `vagrant halt`
-1. Remove the second network adapter - VMWare GUI
-1. Restart the machine - VMWare GUI
-1. Log in as the `slingshot` user
-1. Remove the vagrant user: `sudo userdel -r vagrant`
-1. Remove the contents of /tmp: `sudo rm -rf /tmp/*`
-1. Remove logs: `sudo find /var/log -type f -exec cp /dev/null {} \;`
-1. Remove /var/state/: `sudo rm -rf /var/state`
-1. ~~Zero unused disk space - optional: `sudo dd if=/dev/zero of=/bigemptyfile ; sudo rm -f /bigemptyfile`~~
-1. Clear bash history for root and main user: `history -c`
+1. Install Parallel Tools using the install-gui
+2. Remove `sudo rm /etc/netplan/50-vagrant.yaml`
+3. Shut down the machine - `vagrant halt`
+4. Remove the second network adapter - VMWare GUI
+5. Restart the machine - VMWare GUI
+6. Log in as the `slingshot` user
+7. Remove the vagrant user: `sudo userdel -r vagrant`
+8. Remove the contents of /tmp: `sudo rm -rf /tmp/*`
+9. Remove logs: `sudo find /var/log -type f -exec cp /dev/null {} \;`
+10. Remove /var/state/: `sudo rm -rf /var/state`
+11. Clear bash history for root and main user: `history -c`
 
 ### Command Line Approach - macOS / Fusion
 
